@@ -10,8 +10,10 @@ class starter {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
 		
-		double chicken = Math.max(5-7*3,8%5*7);
-		System.out.println (chicken);
 
+		System.out.println ("Maximum = " + Math.max(13 - 6 * 11, 30 % 7 * (-2)));
+		System.out.println ("Square root = " + Math.Sqrt (3 * 8 + 31 % 7));
+		System.out.println ("Power = " + Math.Pow (37 / 3, 35 % 21));
+		System.out.println (Math.Max(Math.Pow (2, (14%3)), Math.Sqrt ((2*6))  ));
 	}
 }
