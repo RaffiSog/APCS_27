@@ -9,11 +9,41 @@ import java.util.Random;
 
 class starter {
 	// The goal of the first method is to give back whether the year given is a leap year or not. 2004 is a leap year.
+	public static boolean isLeapYear(int l){
+	if (l%400 == 0){
+	return true;
+	}
+	else if (l%100 == 0){
+	return false;
+	}
+	else if (l%4 == 0){
+	return true;
+	}
+	else {
+	return false;
+	}
 
+	}
 	// The goal of the second method is to add all the digits of a number up. Ex: 12345 has a total of 15.
-
+	public static int getDigitSum (int a){
+	int b=10;
+	int total = 0;
+	while (a >= 1){
+	total = total + a%10;
+	a = a/10;
+	}
+	return total;
+	}
 	// The goal of the third method is to check if 3 numbers are consecutive. 15 16 17 are consecutive. It will print if they are or not.
 	// Assume that the first number is always the smallest and the third number is always the largest.
+	public static void printIfConsecutive(int x, int y, int z){
+	if ( x + 1 == y && y + 1 == z){
+	System.out.println("These numbers are consecutive!!!");
+	}
+	else {
+	System.out.println("These numbers are not consecutive!!!");
+	}
+	}
 
 	public static void main(String args[]) {
 		System.out.println("----------------------------------------");
