@@ -14,6 +14,77 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		// Write your code here!
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Welcome to Type Quest!");
+	System.out.println("It is currently"+ getTime() + "and we're ready to play!");
+	System.out.println("Given a sentence, type it as fast as possible!");
+	System.out.println("");
+	System.out.println("------------------------------------------");
+	System.out.println("Would you like to: ");
+	System.out.println(" 1 - Play random");
+	System.out.println(" 2 - Play set");
+	System.out.println(" 3 - Quit");
+	System.out.println("");
+	int type = sc.nextInt();
+
+	while (type != 1 && type != 2 && type != 3){
+	System.out.println("You did not select correctly, please try again.");
+	System.out.println("------------------------------------------");
+	System.out.println("Would you like to: ");
+	System.out.println(" 1 - Play random");
+	System.out.println(" 2 - Play set");
+	System.out.println(" 3 - Quit");
+	System.out.println("");
+	type = sc.nextInt();
+	}
+	sc.nextLine();
+	
+	if (type == 1){
+	System.out.println("You've chosen to randomly select a sentence.");
+	System.out.println();
+	System.out.println("-----------------Your sentence is:-----------------");
+	String Sen = getSentence();
+	System.out.println(Sen);
+	System.out.println("---------------------------------------------------");
+	System.out.println();
+	countdown();
+	startTimer();
+	String Sentence = sc.nextLine();
+	System.out.println("Nice job! Here is your result!");
+	System.out.println("Time: " + endTimer());
+	int errors = compareSentences (Sen, Sentence);
+	System.out.println("Errors:" + errors + " / " + lettersInSentence(Sen) + " letters");
+	System.out.println((lettersInSentence(Sentence)/endTimer()*60) + " letters per minute");
+	System.out.println((wordsInSentence(Sentence)/endTimer()*60) + " words per minute");
+	sc.nextLine();
+	}
+	if (type == 2){
+	System.out.println("Please enter what number sentence you'd like to play:");
+	int Cnumber = sc.nextInt();
+	String CSen = getSentence(Cnumber);
+	System.out.println("-----------------Your sentence is:-----------------");
+	System.out.println(CSen);
+	System.out.println("---------------------------------------------------");
+	System.out.println();
+	countdown();
+	startTimer();
+	String CSentence = sc.nextLine();
+	System.out.println("Nice job! Here is your result!");
+	System.out.println("Time: " + endTimer());
+	int Cerrors = compareSentences (CSen, CSentence);
+	System.out.println("Errors:" + Cerrors + " / " + lettersInSentence(CSen) + " letters");
+	System.out.println((lettersInSentence(CSentence)/endTimer()*60) + " letters per minute");
+	System.out.println((wordsInSentence(CSentence)/endTimer()*60) + " words per minute");
+	}
+
+
+
+
+	
+	
+
+
+
 
 		
 	}
